@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class StudentScrvicesInp implements StudentServices {
+public class StudentScrvicesImp implements StudentServices {
 
     @Autowired
     private StudentRepository studentRepository;
 
     @Override
-    public List<Student> getStudent() {
+    public List<Student> getAllStudent() {
         List<Student> allStudent = studentRepository.findAll();
         return allStudent;
     }
